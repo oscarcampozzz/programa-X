@@ -1,9 +1,10 @@
 import keyboard
-import pyautogui as pa
+import pyautogui as pi
 import random
+import time 
 
-print(pa.position())
-
-for i in range(10):
-    pa.moveTo(x=random.randint(10,1910), y=random.randint(10,1070))
-    print(pa.position())
+while True:
+    pi.moveTo(x=random.randint(10,1910),y=random.randint(10,1070))
+    time.sleep(3)
+    if keyboard.is_pressed("a"):
+        break
